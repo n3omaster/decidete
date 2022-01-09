@@ -14,8 +14,7 @@
       <p><small> Recuerda terminar con signo de interrogación [?] </small></p>
 
       <div v-if="isValidQuestion">
-        <h2>{{ question }}</h2>
-        <h3>{{ answer == "yes" ? getYes() : getNo() }}</h3>
+        <h2>{{ answer == "yes" ? getYes() : getNo() }}</h2>
       </div>
     </div>
   </div>
@@ -118,7 +117,8 @@ h2 {
 }
 
 h2 {
-  margin-top: 150px;
+  margin-top: 100px;
+  text-transform: capitalize;
 }
 
 small {
