@@ -1,17 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Decide />
+  <!-- <img alt="Vue logo" src="./assets/logo.png"  <decide>/> -->
+  <!-- <Counter title="Entraron" :start="50" /> -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import Counter from "./components/Counter.vue";
+import Decide from "./components/Decide.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    //Counter,
+    Decide,
+  },
+};
 </script>
 
 <style>
