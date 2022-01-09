@@ -6,11 +6,11 @@
     <div class="bg-dark"></div>
 
     <div class="decide-container">
-      <input
-        type="text"
-        placeholder="Hazme una pregunta, lo que sea"
+      <textarea
+        placeholder="Hazme una pregunta, lo que sea, te doy la verdad."
+        rows="4"
         v-model="question"
-      />
+      ></textarea>
       <p><small> Recuerda terminar con signo de interrogación [?] </small></p>
 
       <div v-if="isValidQuestion">
@@ -37,7 +37,8 @@ export default {
       const api = "6SolxKvHKyjFk0n5IQYwnglhEOqYADBn";
       const random = Math.round(Math.random() * 99);
       const { data } = await fetch(
-        `https://api.giphy.com/v1/gifs/search?api_key=${api}&limit=1&q=duda&offset=${random}`).then((r) => r.json());
+        `https://api.giphy.com/v1/gifs/search?api_key=${api}&limit=1&q=duda&offset=${random}`
+      ).then((r) => r.json());
       this.img = data[0].images.original.url;
     },
     getNo() {
@@ -91,13 +92,17 @@ img,
   z-index: 99;
 }
 
-input {
-  width: 250px;
+textarea {
+  width: 50%;
   padding: 10px 15px;
-  border-radius: 5px;
+  color: #fff;
+  background: transparent;
   border: none;
+  outline: none;
+  border: none;
+  font-size: 40px;
 }
-input:focus {
+textarea:focus {
   outline: none;
 }
 
@@ -114,5 +119,9 @@ h2 {
 
 h2 {
   margin-top: 150px;
+}
+
+small {
+    color: darkgray;
 }
 </style>
