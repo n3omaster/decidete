@@ -92,7 +92,7 @@ img,
 }
 
 textarea {
-  width: 50%;
+  width: 75%;
   padding: 10px 15px;
   color: #fff;
   background: transparent;
